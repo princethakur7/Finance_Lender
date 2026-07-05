@@ -1,0 +1,154 @@
+/* 1200px breakpoint */
+@media (max-width: 1200px) {
+  .container {
+    width: min(100% - 40px, 1060px);
+  }
+
+  .journey {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .journey-step::after {
+    display: none;
+  }
+}
+
+/* 992px breakpoint */
+@media (max-width: 992px) {
+  .hero-layout,
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .finance-visual {
+    min-height: 360px;
+  }
+
+  .grid-3,
+  .grid-4,
+  .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .logo-row,
+  .partner-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .nav-actions .btn {
+    display: none;
+  }
+}
+
+/* 768px breakpoint */
+@media (max-width: 768px) {
+  .section {
+    padding: 64px 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    inset: 76px 0 auto 0;
+    display: none;
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 14px 24px 24px;
+    border-bottom: 1px solid var(--line);
+    background: var(--paper);
+    box-shadow: var(--shadow);
+  }
+
+  .nav-links.open {
+    display: grid;
+  }
+
+  .nav-links a {
+    padding: 13px 10px;
+  }
+
+  .section-head,
+  .cta-band,
+  .footer-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .journey,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-item {
+    grid-template-columns: 54px 1fr;
+  }
+}
+
+/* 576px breakpoint */
+@media (max-width: 576px) {
+  .container {
+    width: min(100% - 28px, var(--max));
+  }
+
+  h1 {
+    font-size: 2.45rem;
+  }
+
+  .hero,
+  .page-hero {
+    padding: 58px 0 44px;
+  }
+
+  .finance-visual,
+  .compact-visual {
+    min-height: 310px;
+  }
+
+  .ledger-sheet {
+    left: 18px;
+    width: 68%;
+  }
+
+  .metric-card,
+  .compact-visual .metric-card {
+    right: 18px;
+    width: 150px;
+  }
+
+  .chart-card,
+  .compact-visual .chart-card {
+    right: 20px;
+    width: 150px;
+  }
+
+  .formula-strip,
+  .compact-visual .formula-strip {
+    left: 18px;
+    right: 18px;
+    font-size: 0.8rem;
+  }
+
+  .hero-actions,
+  .nav-actions {
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .logo-row,
+  .partner-row,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card,
+  .cta-band {
+    padding: 20px;
+  }
+}

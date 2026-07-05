@@ -1,0 +1,60 @@
+/* Home specific sections */
+.product-card,
+.industry-card,
+.benefit-card,
+.blog-card {
+  overflow: hidden;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.product-card:hover,
+.industry-card:hover,
+.benefit-card:hover,
+.blog-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(8, 127, 140, 0.35);
+  box-shadow: var(--shadow);
+}
+
+.journey {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+}
+
+.journey-step {
+  position: relative;
+  min-height: 180px;
+  padding: 22px;
+  overflow: hidden;
+}
+
+.journey-step::before {
+  content: "";
+  position: absolute;
+  inset: auto 18px 18px auto;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(246, 183, 60, 0.25), transparent 65%);
+}
+
+.journey-step::after {
+  content: "";
+  position: absolute;
+  top: 42px;
+  right: -14px;
+  width: 14px;
+  height: 2px;
+  background: var(--line);
+}
+
+.journey-step:last-child::after {
+  display: none;
+}
+
+.blog-meta {
+  color: var(--teal-dark);
+  font-weight: 800;
+  font-size: 0.9rem;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Estimate business funding EMI, total interest, eligibility fit, and NIKIT product recommendation.">
+  <title>Funding Calculator | NIKIT</title>
+  <link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><div class="container navbar"><a class="brand" href="index.html"><span class="brand-mark">N</span><span>NIKIT</span></a><nav class="nav-links" aria-label="Primary navigation"><a href="index.html">Home</a><a href="about.html">About</a><a href="products.html">Products</a><a href="industries.html">Industries</a><a href="how-it-works.html">How It Works</a><a href="calculator.html">Calculator</a><a href="resources.html">Resources</a><a href="contact.html">Contact</a></nav><div class="nav-actions"><a class="btn btn-primary" href="calculator.html">Check Funding</a><button class="theme-toggle" type="button" aria-label="Switch to dark theme" title="Toggle theme"><span class="theme-icon" aria-hidden="true">☾</span></button><button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button></div></div></header>
+  <main id="main">
+    <section class="page-hero"><div class="container"><p class="eyebrow">Funding calculator</p><h1>Estimate repayment comfort before applying.</h1><p class="lead">Use this calculator to understand EMI, interest, eligibility fit, and the type of funding NIKIT may recommend.</p><div class="finance-visual compact-visual" aria-hidden="true"><div class="ledger-sheet"><span></span><div class="line"></div><div class="line"></div><div class="line"></div><strong>Funding model</strong></div><div class="metric-card"><span>Signal</span><strong>AI</strong><p>Eligibility scan</p></div><div class="chart-card"><i style="height:42%"></i><i></i><i></i><i></i></div><div class="formula-strip">ROI  +  EMI  +  ARR  +  CASH FLOW</div></div></div></section>
+    <!-- Calculator -->
+    <section class="section"><div class="container grid-2">
+      <form id="calculatorForm" class="card form-grid reveal">
+        <div class="field"><label for="fundingAmount">Funding Amount</label><input id="fundingAmount" type="number" min="100000" step="50000" value="2500000"></div>
+        <div class="field"><label for="interestRate">Interest Rate %</label><input id="interestRate" type="number" min="1" max="36" step="0.25" value="14"></div>
+        <div class="field"><label for="tenure">Tenure in Months</label><input id="tenure" type="number" min="3" max="84" step="1" value="24"></div>
+        <div class="field"><label for="monthlyRevenue">Monthly Revenue</label><input id="monthlyRevenue" type="number" min="100000" step="50000" value="1800000"></div>
+        <div class="field"><label for="businessAge">Business Age in Months</label><input id="businessAge" type="number" min="1" max="240" step="1" value="30"></div>
+        <button class="btn btn-primary" type="submit">Calculate</button>
+      </form>
+      <aside class="hero-panel reveal" aria-live="polite">
+        <div class="hero-metric"><span>Estimated EMI</span><strong id="emiOutput" class="metric-value">₹0</strong></div>
+        <div class="hero-metric"><span>Total Interest</span><strong id="interestOutput" class="metric-value">₹0</strong></div>
+        <div class="hero-metric"><span>Eligibility</span><strong id="eligibilityOutput" class="metric-value">0%</strong></div>
+        <div class="funding-card"><strong>Eligibility chart</strong><div class="progress" id="chartBar"><span></span></div><p id="recommendationOutput">Enter your business details to see a recommendation.</p></div>
+      </aside>
+    </div></section>
+    <!-- Notes -->
+    <section class="section section-alt"><div class="container grid-3"><article class="card reveal"><h3>Not a final approval</h3><p>This estimate helps you prepare. Final terms depend on lender checks, documents, and credit policy.</p></article><article class="card reveal"><h3>Cash-flow first</h3><p>Eligibility considers monthly revenue and repayment burden, not only requested funding amount.</p></article><article class="card reveal"><h3>Better applications</h3><p>Use the result to choose a realistic amount before speaking with funding partners.</p></article></div></section>
+  </main>
+  <footer class="site-footer"><div class="container footer-grid"><div><a class="brand" href="index.html"><span class="brand-mark">N</span><span>NIKIT</span></a><p>Practical funding estimates for business operators.</p></div><div><h3>Company</h3><div class="footer-links"><a href="about.html">About</a></div></div><div><h3>Products</h3><div class="footer-links"><a href="products.html">Products</a></div></div><div><h3>Resources</h3><div class="footer-links"><a href="resources.html">Articles</a></div></div><div><h3>Contact</h3><div class="footer-links"><a href="contact.html">Contact</a></div></div></div><div class="container footer-bottom"><span>© <span id="year"></span> NIKIT Financial Technologies.</span><span>Estimate before applying.</span></div></footer>
+  <script src="js/navbar.js"></script><script src="js/animations.js"></script><script src="js/calculator.js"></script><script src="js/app.js"></script>
+</body>
+</html>

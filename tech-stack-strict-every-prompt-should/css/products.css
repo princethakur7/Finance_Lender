@@ -1,0 +1,36 @@
+/* Products and expandable cards */
+.product-expand {
+  padding: 0;
+  overflow: hidden;
+}
+
+.product-expand button {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 16px;
+  width: 100%;
+  padding: 24px;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  text-align: left;
+}
+
+.product-expand .details {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 24px;
+  color: var(--muted);
+  transition: max-height 240ms ease, padding 240ms ease;
+}
+
+.product-expand.open .details {
+  max-height: 260px;
+  padding-bottom: 24px;
+}
+
+.product-expand .toggle-symbol {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--teal);
+}

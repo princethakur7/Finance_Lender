@@ -1,0 +1,23 @@
+/* About page */
+.leader {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 16px;
+  align-items: center;
+}
+
+.avatar {
+  display: grid;
+  place-items: center;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: var(--amber);
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+
+.milestone {
+  border-left: 4px solid var(--amber);
+}
